@@ -9,6 +9,38 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <style>
+    /* Центрування всієї секції з формою та матрицею */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Якщо у тебе є окремий контейнер, наприклад .container або .matrix-container */
+.container, .matrix-container {
+  margin: 0 auto;
+  max-width: 900px; /* або під себе */
+  text-align: center;
+}
+
+/* Для самої матриці — щоб усі клітинки стояли рівно */
+.matrix {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* вирівнює все по центру */
+  gap: 10px;
+}
+.matrix .cell {
+  width: 120px; /* можеш підкоригувати */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f44336;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+}
     :root{
       --brand:#d23d3d;
       --brandText:#fff;
