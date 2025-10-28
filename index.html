@@ -267,6 +267,104 @@ button:hover, .calculate-btn:hover {
     font-size: 14px;
   }
 }
+    /* === МОБІЛЬНА ВЕРСІЯ N&G === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #222;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Контейнер */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Форма */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 90%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Матриця */
+.matrix {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 350px;
+}
+
+/* Кнопка */
+.btn {
+  display: inline-block;
+  background-color: #e84e4e;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 24px;
+  transition: 0.3s ease;
+  width: 80%;
+  max-width: 300px;
+}
+
+.btn:hover {
+  background-color: #c93e3e;
+}
+
+/* Підпис */
+.footer-text {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  margin-top: 40px;
+}
+
+/* Для мобільних */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+  input[type="text"],
+  input[type="date"] {
+    font-size: 15px;
+  }
+  .btn {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}
   </style>
 </head>
 <body>
