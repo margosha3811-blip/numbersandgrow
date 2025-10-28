@@ -64,6 +64,100 @@ body {
     input#username{width:100%;max-width:360px;padding:10px 12px;border:1px solid #e0ddd8;border-radius:10px}
     .pink-select{border-radius:10px}
     @media (max-width:840px){.cell{min-width:100px;height:96px}}
+    /* Центрування всього контенту на сторінці */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #faf9f8; /* м’який фон */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Контейнер з формою і матрицею */
+.container, .matrix-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Форма введення */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* Кнопка */
+button, .calculate-btn {
+  background-color: #1f73b7;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+button:hover, .calculate-btn:hover {
+  background-color: #155a8a;
+}
+
+/* Матриця */
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Клітинки матриці */
+.matrix .cell {
+  background: #e74c3c;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 100px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.matrix .cell:nth-child(even) {
+  background: #f7ecec;
+  color: #222;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 480px) {
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+  .matrix {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .matrix .cell {
+    width: 80px;
+    height: 70px;
+    font-size: 14px;
+  }
+}
   </style>
 </head>
 <body>
