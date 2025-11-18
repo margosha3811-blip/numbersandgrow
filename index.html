@@ -379,23 +379,32 @@ input[type="date"] {
   margin-bottom: 32px;
 }
 
-.products-grid{
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
 /* картка однакового розміру */
-.product-card{
-  background:#fff;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  height:100%;
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Вирівнює кнопку вниз */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
+    /* Контент всередині карточки */
+.product-card .content {
+  flex-grow: 1; /* Тягне опис, щоб кнопки вирівнювалися */
+  display: flex;
+  flex-direction: column;
+}
+    
 .product-img{
   width:100%;
   display:block;
@@ -422,6 +431,7 @@ input[type="date"] {
 }
 
 .product-price{
+  margin-bottom: 15px;
   margin-top:auto;             /* притискає ціну й кнопку донизу */
   font-size:18px;
   font-weight:700;
@@ -429,8 +439,8 @@ input[type="date"] {
 
 .product-btn{
   display:block;
-  margin-top:10px;
-  width:100%;
+  margin-top: auto; /* Відштовхує кнопку донизу */
+  width: 100%;
   text-align:center;
   background:#d93b3b;
   color:#fff;
