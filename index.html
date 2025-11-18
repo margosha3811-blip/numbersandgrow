@@ -365,6 +365,116 @@ input[type="date"] {
     padding: 12px 20px;
   }
 }
+    /* === СЕКЦІЯ З РОЗБОРАМИ === */
+.products-section{
+  max-width: 1100px;
+  margin: 60px auto 80px;
+  padding: 0 16px;
+}
+
+.products-title{
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.products-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 24px;
+}
+
+/* картка однакового розміру */
+.product-card{
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.product-img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.product-content{
+  padding:16px 18px 20px;
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+}
+
+.product-title{
+  font-size:20px;
+  font-weight:700;
+  margin:8px 0 6px;
+}
+
+.product-text{
+  font-size:14px;
+  line-height:1.5;
+  margin:0 0 12px;
+}
+
+.product-price{
+  margin-top:auto;             /* притискає ціну й кнопку донизу */
+  font-size:18px;
+  font-weight:700;
+}
+
+.product-btn{
+  display:block;
+  margin-top:10px;
+  width:100%;
+  text-align:center;
+  background:#d93b3b;
+  color:#fff;
+  padding:10px 0;
+  border-radius:10px;
+  font-size:16px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* === АДАПТИВНІСТЬ ДЛЯ МОБІЛКИ === */
+@media (max-width: 960px){
+  .products-grid{
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 640px){
+  .products-section{
+    margin-top:40px;
+    padding:0 10px;
+  }
+
+  .products-title{
+    font-size:20px;
+    margin-bottom:20px;
+  }
+
+  .products-grid{
+    grid-template-columns:1fr;   /* по одній картці в ряд */
+  }
+
+  .product-content{
+    padding:14px 14px 18px;
+  }
+
+  .product-title{
+    font-size:18px;
+  }
+
+  .product-btn{
+    font-size:15px;
+  }
+}
   </style>
 </head>
 <body>
@@ -705,134 +815,102 @@ input[type="date"] {
 </body>
 </html>
 
-<section id="products" style="margin-top: 60px;">
-  <h2 style="text-align:center; font-size:32px; font-weight:700; margin-bottom:40px;">
-    Твій персональний навігатор до життя, про яке ти мрієш. Натискай "Замовити" та вкажи номер розбору і я все оформлю.
+<section id="products" class="products-section">
+  <h2 class="products-title">
+    Твій персональний навігатор до життя, про яке ти мрієш.<br>
+    Натискай «Замовити», вкажи номер розбору – і я все оформлю в Telegram.
   </h2>
 
-  <div class="products-grid" style="
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 0 20px;
-  ">
+  <div class="products-grid">
 
     <!-- 1. WIN&GROW -->
-    <div class="product-card" style="background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-      <img src="WIN&GROW.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px; font-size:24px; font-weight:700;">1. WIN&GROW</h3>
-      <p style="font-size:16px; line-height:1.5; margin:10px 0;">
-Твій особистий прогноз на рік.
-
-Це персональний PDF-навігатор на 2026 рік.
-Тут ти дізнаєшся все про головну тема свого 2026 року, які можливості та ризики на тебе чекають, прогноз по стосунках, фінансах, здоров’ю, реалізації
-та детальний опис кожного місяця: що робити, а що краще відкласти.
-Допомагає планувати рік усвідомлено і досягати бажаного легше та швидше.
-Зміни своє життя до невпізнання всього за рік.
-        <p style="font-size:16px; line-height:7.5; margin:10px 0;">
-
-<h3 style="margin-top:15px; font-size:24px; font-weight:700;">Вартість: 2811 грн</h3>
-      </p>
-      <a href="https://t.me/margosha_3811" target="_blank" style="
-          display:block; text-align:center; margin-top:15px;
-          background:#d93b3b; color:#fff; padding:12px 0;
-          border-radius:10px; font-size:18px; font-weight:600; text-decoration:none;
-      ">Замовити</a>
+    <div class="product-card">
+      <img src="WIN&GROW.png" alt="WIN&GROW" class="product-img">
+      <div class="product-content">
+        <h3 class="product-title">1. WIN&GROW — шлях до перемоги</h3>
+        <p class="product-text">
+Твій особистий прогноз на 2026 рік: головна тема року, можливості та ризики, стосунки, фінанси, здоров’я, реалізація.
+Покроковий опис кожного місяця: що робити, а що краще відкласти.
+Допомагає планувати рік усвідомлено й досягати бажаного легше та швидше.
+        </p>
+        <div class="product-price">Вартість: 2811 грн</div>
+        <a href="https://t.me/margosha_3811" target="_blank" class="product-btn">Замовити</a>
+      </div>
     </div>
 
     <!-- 2. GLOW&GROW -->
-    <div class="product-card" style="background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-      <img src="GLOW&GROW.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px; font-size:24px; font-weight:700;">2. GLOW&GROW</h3>
-      <p style="font-size:16px; line-height:1.5; margin:10px 0;">
-Все про твою енергію та самооцінку
-
-Твій особистий розбір про внутрішній ресурс в якому ти дізнаєшся все про свою базову енергію, що блокує самооцінку і як це виправити, які твої сильні сторони та точки росту, як підвищити енергію й повернути внутрішню опору та все, що підходить та заряджає тільки тебе: ресурсний спорт, стиль, зачіски, кольори, звички, харчування, символи та багато іншого
-
-Підходить тим, хто хоче більше сили, впевненості та спокою.
-        <p style="font-size:16px; line-height:7.5; margin:10px 0;">
-<h3 style="margin-top:15px; font-size:24px; font-weight:700;">Вартість: 3811 грн</h3>
-      </p>
-      <a href="https://t.me/margosha_3811" target="_blank" style="
-          display:block; text-align:center; margin-top:15px;
-          background:#d93b3b; color:#fff; padding:12px 0;
-          border-radius:10px; font-size:18px; font-weight:600; text-decoration:none;
-      ">Замовити</a>
+    <div class="product-card">
+      <img src="GLOW&GROW.png" alt="GLOW&GROW" class="product-img">
+      <div class="product-content">
+        <h3 class="product-title">2. GLOW&GROW — енергія та самооцінка</h3>
+        <p class="product-text">
+Особистий розбір про внутрішній ресурс: твоя базова енергія, що блокує самооцінку і як це виправити, сильні сторони та точки росту.
+Що саме заряджає тільки тебе: стиль, зачіски, кольори, звички, спорт, харчування, символи.
+Підійде тим, хто хоче більше сили, впевненості та внутрішнього спокою.
+        </p>
+        <div class="product-price">Вартість: 3811 грн</div>
+        <a href="https://t.me/margosha_3811" target="_blank" class="product-btn">Замовити</a>
+      </div>
     </div>
 
     <!-- 3. FLOW&GROW -->
-    <div class="product-card" style="background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-      <img src="Flow&grow.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px; font-size:24px; font-weight:700;">3. FLOW&GROW</h3>
-      <p style="font-size:16px; line-height:1.5; margin:10px 0;">
-  Твій особистий фінансовий розбір.
-
-Персональний фінансовий профіль за датою народження.
-Усередині все про твій грошовий код, сильні та слабкі сторони у фінансах, твої таланти й напрямки, що приносять дохід, що блокує гроші та як це виправити, фінансова дисципліна: що та як робити, щоб примножити гроші саме тобі, фінансова стратегія: як реалізувати себе та що саме робити задля фінансового зростання, стратегія ведення соціальних мереж: як почати вести блог, в якому форматі та про що саме, як набрати авдиторію без вкладень у блог
-
-Для тих, хто хоче зрозуміти свій фінансовий потенціал і стабільно збільшувати дохід.
-        <p style="font-size:16px; line-height:10.5; margin:10px 0;">
-<h3 style="margin-top:15px; font-size:24px; font-weight:700;">Вартість: 3811 грн</h3>
-      </p>
-      <a href="https://t.me/margosha_3811" target="_blank" style="
-          display:block; text-align:center; margin-top:15px;
-          background:#d93b3b; color:#fff; padding:12px 0;
-          border-radius:10px; font-size:18px; font-weight:600; text-decoration:none;
-      ">Замовити</a>
+    <div class="product-card">
+      <img src="Flow&grow.png" alt="Flow&grow" class="product-img">
+      <div class="product-content">
+        <h3 class="product-title">3. FLOW&GROW — самореалізація та гроші</h3>
+        <p class="product-text">
+Фінансовий профіль за датою народження: твій грошовий код, сильні та слабкі сторони, таланти й напрямки, що приносять дохід.
+Що блокує гроші та як це змінити, фінансова дисципліна й стратегія збільшення доходу.
+Окремо — стратегія блогу: про що говорити, в якому форматі та як рости без вкладень у рекламу.
+        </p>
+        <div class="product-price">Вартість: 3811 грн</div>
+        <a href="https://t.me/margosha_3811" target="_blank" class="product-btn">Замовити</a>
+      </div>
     </div>
 
     <!-- 4. KNOW&GROW -->
-    <div class="product-card" style="background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-      <img src="KNOW&GROW.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px; font-size:24px; font-weight:700;">4. KNOW&GROW</h3>
-      <p style="font-size:16px; line-height:1.5; margin:10px 0;">
-        KNOW&GROW — розбір твоєї психоматриці, в якому все про твій характер, сильні сторони та таланти приховані риси й слабкі місця, повний опис кожного показника, енергія життя та внутрішні ресурси, рекомендації: як пропрацювати свою слабкість та як посилилити свою силу.
-
-Підійде тим, хто хоче глибше зрозуміти себе, свій шлях і свою природу 🌿
-        <p style="font-size:16px; line-height:1.5; margin:10px 0;">
-        <h3 style="margin-top:15px; font-size:24px; font-weight:700;">Вартість: 1138 грн</h3>
-      </p>
-      <a href="https://t.me/margosha_3811" target="_blank" style="
-          display:block; text-align:center; margin-top:15px;
-          background:#d93b3b; color:#fff; padding:12px 0;
-          border-radius:10px; font-size:18px; font-weight:600; text-decoration:none;
-      ">Замовити</a>
+    <div class="product-card">
+      <img src="KNOW&GROW.png" alt="KNOW&GROW" class="product-img">
+      <div class="product-content">
+        <h3 class="product-title">4. KNOW&GROW — цифри та самопізнання</h3>
+        <p class="product-text">
+Глибокий розбір психоматриці: характер, таланти, приховані риси, слабкі місця, енергетика життя.
+Детальний опис кожного показника та рекомендації: як пропрацювати слабкість і посилити свої сильні сторони.
+Підійде тим, хто хоче краще зрозуміти себе та свій шлях.
+        </p>
+        <div class="product-price">Вартість: 1138 грн</div>
+        <a href="https://t.me/margosha_3811" target="_blank" class="product-btn">Замовити</a>
+      </div>
     </div>
 
     <!-- 5. LOVE&GROW -->
-    <div class="product-card" style="background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-      <img src="LOVE&GROW.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px; font-size:24px; font-weight:700;">5. LOVE&GROW</h3>
-      <p style="font-size:16px; line-height:1.5; margin:10px 0;">
-  Ваш особистий розбір сумісності!
-
-Допоможе зрозуміти як ви підходите одне одному, ваші сильні та слабкі сторони як пари, зони конфліктів і як їх уникати, ваша мова кохання та як будувати стосунки легко й гармонійно
-
-Підійде парам, які хочуть глибше розуміти одне одного та покращити взаємність 💞
-<h3 style="margin-top:15px; font-size:24px; font-weight:700;">Вартість: 1811 грн</h3>
-      </p>
-      <a href="https://t.me/margosha_3811" target="_blank" style="
-          display:block; text-align:center; margin-top:15px;
-          background:#d93b3b; color:#fff; padding:12px 0;
-          border-radius:10px; font-size:18px; font-weight:600; text-decoration:none;
-      ">Замовити</a>
+    <div class="product-card">
+      <img src="LOVE&GROW.png" alt="LOVE&GROW" class="product-img">
+      <div class="product-content">
+        <h3 class="product-title">5. LOVE&GROW — кохання та гармонія</h3>
+        <p class="product-text">
+Розбір сумісності: як ви підходите одне одному, сильні та слабкі сторони пари, зони конфліктів і способи їх м’яко проживати.
+Мова кохання кожного та підказки, як будувати стосунки легко й гармонійно.
+Ідеально, якщо хочете більше взаємності та розуміння у парі.
+        </p>
+        <div class="product-price">Вартість: 1811 грн</div>
+        <a href="https://t.me/margosha_3811" target="_blank" class="product-btn">Замовити</a>
+      </div>
     </div>
 
     <!-- 6. CHILD&GROW -->
-    <div class="product-card" style="background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-      <img src="CHILD&GROW.png" style="width:100%; border-radius:10px;">
-      <h3 style="margin-top:15px; font-size:24px; font-weight:700;">6. CHILD&GROW</h3>
-      <p style="font-size:16px; line-height:1.5; margin:10px 0;">
-Розбір психоматриці вашої дитини, що допоможе краще зрозуміти характер і природні задатки дитини, таланти, здібності та потенціал, тип темпераменту, що дитині важливо для гармонійного розвитку, як правильно підтримувати, заохочувати і не тиснути, прогноз поведінкових особливостей
-
-Для батьків, які хочуть краще розуміти свою дитину та допомогти їй розкритись 💛
-        <h3 style="margin-top:15px; font-size:24px; font-weight:700;">Вартість: 1381 грн</h3>
-      </p>
-      <a href="https://t.me/margosha_3811" target="_blank" style="
-          display:block; text-align:center; margin-top:15px;
-          background:#d93b3b; color:#fff; padding:12px 0;
-          border-radius:10px; font-size:18px; font-weight:600; text-decoration:none;
-      ">Замовити</a>
+    <div class="product-card">
+      <img src="CHILD&GROW.png" alt="CHILD&GROW" class="product-img">
+      <div class="product-content">
+        <h3 class="product-title">6. CHILD&GROW — батьки та діти</h3>
+        <p class="product-text">
+Розбір психоматриці дитини: характер, природні задатки, таланти, тип темпераменту та особливості поведінки.
+Що для дитини важливо, як підтримувати без тиску, як м’яко дисциплінувати й допомогти розкрити потенціал.
+Для батьків, які хочуть бути опорою та краще розуміти свою дитину.
+        </p>
+        <div class="product-price">Вартість: 1381 грн</div>
+        <a href="https://t.me/margosha_3811" target="_blank" class="product-btn">Замовити</a>
+      </div>
     </div>
 
   </div>
