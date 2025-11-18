@@ -475,6 +475,90 @@ input[type="date"] {
     font-size:15px;
   }
 }
+    /* ===== УНІВЕРСАЛЬНЕ ВИРІВНЮВАННЯ КАРТОЧОК ===== */
+
+.product-card {
+    max-width: 420px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* Титул */
+.product-card h3 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Текст опису */
+.product-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Вартість */
+.product-price {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 18px 0 16px 0;
+}
+
+/* Кнопка */
+.product-card button {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 14px;
+    background-color: #d53939;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    transition: 0.2s ease;
+}
+
+.product-card button:active {
+    transform: scale(0.97);
+}
+
+/* ===== ЗОБРАЖЕННЯ ===== */
+.product-card img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* ===== ВІДСТУП МІЖ МАТРИЦЕЮ І РОЗБОРАМИ ===== */
+#products-section {
+    margin-top: 55px;
+}
+
+
+/* ===== АДАПТАЦІЯ НА МОБІЛЬНИХ ЕКРАНАХ ===== */
+
+@media (max-width: 420px) {
+    .product-card p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .product-card h3 {
+        font-size: 18px;
+    }
+
+    .product-card button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
   </style>
 </head>
 <body>
